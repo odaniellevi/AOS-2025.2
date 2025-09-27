@@ -35,3 +35,11 @@ function deleteTarefa(id) {
     tarefas.splice(index, 1);
     return true;
 }
+
+export {
+    getAllTarefas,
+    getTarefaById,
+    createTarefa,
+    updateTarefa,
+    deleteTarefa,
+};
