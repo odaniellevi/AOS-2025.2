@@ -1,0 +1,25 @@
+{
+  "name": "ex03-crud",
+  "version": "1.0.0",
+  "description": "Projeto para a atividade de tarefas de AOS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/index.js"
+  },
+  "keywords": ["express", "tarefas", "dotenv", "nodemon", "babel"],
+  "author": "Daniel Levi",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.28.3",
+    "@babel/core": "^7.28.4",
+    "@babel/node": "^7.28.0",
+    "@babel/preset-env": "^7.28.3",
+    "nodemon": "^3.1.10"
+  }
+}
