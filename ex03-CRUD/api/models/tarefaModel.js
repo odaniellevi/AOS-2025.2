@@ -24,7 +24,7 @@ function updateTarefa(id, data) {
     if (!tarefa) return null;
 
     if (data.descricao != undefined) tarefa.descricao = data.descricao;
-    id (data.concluida != undefined) tarefa.concluida = data.concluida;
+    if (data.concluida != undefined) tarefa.concluida = data.concluida;
 
     return tarefa;
 }
