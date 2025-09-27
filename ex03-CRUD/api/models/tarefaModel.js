@@ -18,3 +18,20 @@ function createTarefa(data) {
     tarefas.push(novaTarefa);
     return novaTarefa;
 }
+
+function updateTarefa(id, data) {
+    const tarefa = getTarefaById(id);
+    if (!tarefa) return null;
+
+    if (data.descricao != undefined) tarefa.descricao = data.descricao;
+    id (data.concluida != undefined) tarefa.concluida = data.concluida;
+
+    return tarefa;
+}
+
+function deleteTarefa(id) {
+    const index = tarefas.findIndex((t) => t.id === Number(id));
+    if (index === -1) return false;
+    tarefas.splice(index, 1);
+    return true;
+}
