@@ -1,16 +1,6 @@
 import express from 'express';
+import tarefasRouter from "./routes/tarefasRoutes.js";
 import dotenv from 'dotenv';
 
-dotenv.config();
-
 const app = express();
-
-const PORT = process.env.PORT || 3000;
-
-app.get('/', (req, res) => {
-  res.send('Servidor rodando com Express, Babel e Nodemon!');
-});
-
-app.listen(PORT, () => {
-  console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
-});
+const PORT = 3000;
