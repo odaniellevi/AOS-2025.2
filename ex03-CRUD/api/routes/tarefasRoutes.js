@@ -4,4 +4,9 @@ import * as TarefasController from "../controllers/m/tarefasController.js";
 const router = express.Router();
 
 router.get("/tarefas", TarefasController.listarTarefas);
-router.
+router.get("/tarefas/:id", TarefasController.buscarTarefa);
+router.post("/tarefas", TarefasController.criarTarefa);
+router.put("/tarefas/:id", TarefasController.atualizarTarefa);
+router.delete("/tarefas/:id", TarefasController.deletarTarefa);
+
+export default router;
