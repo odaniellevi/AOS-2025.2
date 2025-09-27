@@ -1,15 +1,15 @@
 let tarefas = [];
 let currentId = 1;
 
-function getAllTarefas() {
+function obterTodasAsTarefas() {
     return tarefas;
 }
 
-function getTarefaById() {
+function obterTarefaPorId(id) {
     return tarefas.find((t) => t.id === Number(id));
 }
 
-function createTarefa(data) {
+function criarTarefa(data) {
     const novaTarefa = {
         id: currentId++,
         descricao: data.descricao,
@@ -19,8 +19,8 @@ function createTarefa(data) {
     return novaTarefa;
 }
 
-function updateTarefa(id, data) {
-    const tarefa = getTarefaById(id);
+function atualizarTarefa(id, data) {
+    const tarefa = obterTarefaPorId(id);
     if (!tarefa) return null;
 
     if (data.descricao != undefined) tarefa.descricao = data.descricao;
@@ -29,7 +29,7 @@ function updateTarefa(id, data) {
     return tarefa;
 }
 
-function deleteTarefa(id) {
+function deletarTarefa(id) {
     const index = tarefas.findIndex((t) => t.id === Number(id));
     if (index === -1) return false;
     tarefas.splice(index, 1);
@@ -37,9 +37,9 @@ function deleteTarefa(id) {
 }
 
 export {
-    getAllTarefas,
-    getTarefaById,
-    createTarefa,
-    updateTarefa,
-    deleteTarefa,
+    obterTodasAsTarefas,
+    obterTarefaPorId,
+    criarTarefa,
+    atualizarTarefa,
+    deletarTarefa,
 };
